@@ -5,6 +5,7 @@ Python script to send random HTTP requests, to "hide" your traffic and confuse y
 Libraries to install: `pip install requests`
 
 How to install the project: `git clone https://github.com/QL0R/Traffic-Confuser.git`
+
 Usage: `python3 traffic-confuser.py`
 
 You can edit the sample.txt file to other websites you want
