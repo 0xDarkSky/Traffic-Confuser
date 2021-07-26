@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import requests as req
 import os
 import time
@@ -51,11 +52,7 @@ logo = """
          ░╚════╝░░╚════╝░╚═╝░░╚══╝╚═╝░░░░░░╚═════╝░╚═════╝░╚══════╝╚═╝░░╚═╝
 """
 
-  
-
 os.system('cls' if os.name == 'nt' else 'clear')
-
-
 
 def fast_type(z):
     for x in z:
@@ -68,6 +65,23 @@ def super_type(b):
         sys.stdout.write(a)
         sys.stdout.flush()
         time.sleep(0.06)
+
+def slow_type(l):
+    for o in l:
+        sys.stdout.write(o)
+        sys.stdout.flush()
+        time.sleep(0.1)
+
+def web_check():
+    if path.exists("sample.txt"):
+       pass
+    else:
+       super_type("File sample.txt is missing. Creating file...")
+       Q = open("sample.txt", "a")
+       Q.write("https://www.reddit.com\nhttps://www.github.com\nhttps://www.youtube.com\nhttps://www.facebook.com\nhttps://www.yahoo.com\nhttps://www.weather.com\nhttps://www.cnn.com\nhttps://www.twitter.com\nhttps://www.wikipedia.org\nhttps://www.quora.com\n")
+       Q.close()
+       super_type("\n\nFile created.\n")
+      
 
 def file_check():
     if path.exists("CodeCheck"):
@@ -255,6 +269,7 @@ def true_random_slow():
     time.sleep(a10)
 
 count = 0
+web_check()
 file_check()
 start_status()
 while True:
@@ -264,8 +279,5 @@ while True:
 
     except KeyboardInterrupt:
        super_type(f"\nSent about {count} requests.\n")
-       time.sleep(2)
        os.system('cls' if os.name == 'nt' else 'clear')
        exit()
-
-
