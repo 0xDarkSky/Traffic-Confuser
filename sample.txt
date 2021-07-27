@@ -9,4 +9,4 @@ https://www.twitter.com
 https://www.wikipedia.org
 https://www.quora.com
 
-#You can change it to other websites, but it won't work if there are more or less than 10 websites
+#You can change it to other websites, add more/remove
