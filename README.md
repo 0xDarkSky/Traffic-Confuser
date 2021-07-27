@@ -8,5 +8,7 @@ How to install the project: `git clone https://github.com/QL0R/Traffic-Confuser.
 
 Usage: `python3 traffic-confuser.py`
 
-You can edit the sample.txt file to other websites you want
+You can edit the sample.txt file to other websites you want.
+
+Support on Linux and Termux. (Might work Windows and MacOS, not tested")
 
