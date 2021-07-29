@@ -7,7 +7,9 @@ I usually code in Python and C++, inexperienced in website development, you can 
 How to contact me?
 
 You can contact me via Discord or Email:
+
 Discord: DarkSky#8969
+
 Email: darksky.main@protonmail.com
 
 *Making projects together is way more fun than doing it alone!*
