@@ -2,7 +2,7 @@ Interested in contributing?
 
 I'm looking for someone to code and make projects together with :D
 
-I usually code in Python and C++, inexperienced in website development, you can check out my website - https://nbsnews.neocities.org/
+I usually code in Python and C++, inexperienced in website development, you can check out a website that I created with a friend - https://nbsnews.neocities.org/
 
 How to contact me?
 
