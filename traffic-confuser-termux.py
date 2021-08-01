@@ -97,7 +97,7 @@ def send_stuff():
             print("Success - " + split_content)
          else:
             print("Fail - " + split_content)
-         sleepr = random.randint(10,30)
+         sleepr = random.randint(10,30) # edit this if you want it slower/faster
          sleeper = float(sleepr)
          time.sleep(sleeper)
         
