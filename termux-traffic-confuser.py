@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import math
 import requests as req
 import os
@@ -78,11 +77,14 @@ def file_check():
        print(LICENSE)
        time.sleep(3)
        os.system('cls' if os.name == 'nt' else 'clear')
+       root_check()
        super_type("License check is a one time thing.\n")
        f = open("CodeCheck", "a")
-       f.write("\n\n-- Please don't delete me, I'm just a simple check for the Traffic-Confuser script, I don't take much space :) --")
+       f.write("\n\n-- Please don't delete me, I'm just a simple check for the Traffic-Confuser.py code, I don't take much space :) --")
        f.close()
-            
+       run_anywhere()
+       
+
 def start_status():
     print(logo)
     super_type("Started...\n\n")
@@ -97,7 +99,7 @@ def send_stuff():
             print("Success - " + split_content)
          else:
             print("Fail - " + split_content)
-         sleepr = random.randint(10,30) # edit this if you want it slower/faster
+         sleepr = random.randint(0,3) # edit this if you want it faster/slower
          sleeper = float(sleepr)
          time.sleep(sleeper)
         
