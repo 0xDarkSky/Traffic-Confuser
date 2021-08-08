@@ -77,13 +77,10 @@ def file_check():
        print(LICENSE)
        time.sleep(3)
        os.system('cls' if os.name == 'nt' else 'clear')
-       root_check()
        super_type("License check is a one time thing.\n")
        f = open("CodeCheck", "a")
        f.write("\n\n-- Please don't delete me, I'm just a simple check for the Traffic-Confuser.py code, I don't take much space :) --")
        f.close()
-       run_anywhere()
-       
 
 def start_status():
     print(logo)
