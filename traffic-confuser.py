@@ -61,6 +61,16 @@ def super_type(b):
         sys.stdout.flush()
         time.sleep(0.03)
 
+def where_is():
+    where = os.system("which python")
+    edit_file = open("/usr/local/bin/Traffic-Confuser", "r")
+    list_of_lines = edit_file.readlines()
+    list_of_lines[0] = (where)
+
+    edit_file = open("/usr/local/bin/Traffic-Confuser", "w")
+    edit_file.writelines(f"list_of_lines\n")
+    edit_file.close()
+
 def root_check():
     sudo_check = os.geteuid() == 0
     if sudo_check == True:
@@ -80,16 +90,20 @@ def web_check():
        super_type("\n\nFile created.\n")
 
 def run_anywhere():
-    super_type("Do you want to copy the file to /usr/local/bin? This will let you run the code from any directory by typing Traffic-Confuser. Don't do it if you're on Windows or Termux because it won't work.")
-    ch = input("\nY/n? ")
-    if "y" == ch.lower():
-        os.system("mv traffic-confuser.py Traffic-Confuser")
-        os.system("cp Traffic-Confuser /usr/local/bin")
-        super_type("Now you can run it anywhere by typing: Traffic-Confuser")
-        time.sleep(2)
-        os.system('cls' if os.name == 'nt' else 'clear')
-    if "n" == ch.lower():
-        pass
+    if path.exists("CodeCheck"):
+         pass
+    else:
+         super_type("Do you want to copy the file to /usr/local/bin? This will let you run the code from any directory by typing Traffic-Confuser. Don't do it if you're on Windows or Termux because it won't work.")
+         ch = input("\nY/n? ")
+         if "y" == ch.lower():
+               os.system("mv traffic-confuser.py Traffic-Confuser")
+               os.system("cp Traffic-Confuser /usr/local/bin")
+               where_is()
+               super_type("Now you can run it anywhere by typing: Traffic-Confuser")
+               time.sleep(2)
+               os.system('cls' if os.name == 'nt' else 'clear')
+         if "n" == ch.lower():
+               pass
     
 def file_check():
     if path.exists("CodeCheck"):
