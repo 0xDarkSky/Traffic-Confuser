@@ -97,12 +97,7 @@ def run_anywhere():
     
 def file_check():
     if path.exists("CodeCheck"):
-       x = os.stat("CodeCheck")
-       age = (time.time()-x.st_mtime)
-       if age > 356029.69091153145:
-          super_type("\nYou should check the repository https://github.com/QL0R/Traffic-Confuser, the files might be outdated.\n")
-          time.sleep(2)
-          pass
+       pass
     else:
        print(LICENSE)
        time.sleep(3)
@@ -137,6 +132,7 @@ count = 0
 web_check()
 file_check()
 start_status()
+start_time = time.time()
 
 while True:
     try:
@@ -144,7 +140,7 @@ while True:
        send_stuff() 
       
     except KeyboardInterrupt:
-       super_type(f"\nSent {count} requests.")
-       time.sleep(1)
+       super_type(f"\nSent {count} requests in " + "%s seconds." % (time.time() - start_time))
+       time.sleep(2)
        os.system('cls' if os.name == 'nt' else 'clear')
        exit()
