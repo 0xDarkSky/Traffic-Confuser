@@ -1,7 +1,4 @@
 #!/usr/bin/env python3
-#location of where your python is
-#os.system("which python")
-
 import math
 import requests as req
 import os
@@ -108,26 +105,38 @@ def file_check():
        f.write("\n\n-- Please don't delete me, I'm just a simple check for the Traffic-Confuser.py code, I don't take much space :) --")
        f.close()
        run_anywhere()
-       
+try:       
+   usr_input = sys.argv[1]
+except IndexError:
+   super_type("Wrong input!\nUsage: specify slow or fast, ex.: python3 traffic-confuser.py slow.\n")
+   exit()
 
 def start_status():
     print(logo)
     super_type("Started...\n\n")
   
+def arg():
+    if usr_input.lower() == "slow":
+       sleeper = random.randint(5,20)
+       sleeps = float(sleeper)
+       time.sleep(sleeps)
+    if usr_input.lower() == "fast":
+       sleeper = random.randint(0,3)
+       sleeps = float(sleeper)
+       time.sleep(sleeps)
+    
 def send_stuff():
     with open("sample.txt") as f:
          content = f.readlines()
          content_done = [x.strip() for x in content]
          split_content = random.choice(content_done)
          resp = req.get(split_content)
+         arg()
          if resp.status_code == 200:
             print("Success - " + split_content)
          else:
             print("Fail - " + split_content)
-         sleepr = random.randint(0,3) # edit this if you want it faster/slower
-         sleeper = float(sleepr)
-         time.sleep(sleeper)
-        
+               
 count = 0
 web_check()
 file_check()
@@ -140,7 +149,13 @@ while True:
        send_stuff() 
       
     except KeyboardInterrupt:
-       super_type(f"\nSent {count} requests in " + "%s seconds." % (time.time() - start_time))
+       secs = int((time.time() - start_time))
+       if secs < 60:
+          super_type(f"\nSent {count} requests in " + "%s seconds." % (secs)) 
+       if secs > 60:
+          calc = secs / 60
+          calc = int(mins)
+          super_type(f"\nSent {count} requests in {mins} minutes.")          
        time.sleep(2)
        os.system('cls' if os.name == 'nt' else 'clear')
        exit()
