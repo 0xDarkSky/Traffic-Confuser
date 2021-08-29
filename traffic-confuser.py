@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import math
-import requests as req
 import os
 import time
 import os.path
@@ -8,6 +7,14 @@ from os import path
 import sys
 import random
 from datetime import datetime
+
+try:
+   import requests as req
+except ImportError:
+   print("Missing dependencies!")
+   print("Installing requests module...")
+   os.system("pip install requests")
+      
 
 LICENSE = """
 MIT License
