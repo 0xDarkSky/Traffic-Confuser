@@ -12,9 +12,14 @@ try:
    import requests as req
 except ImportError:
    print("Missing dependencies!")
-   print("Installing requests module...")
-   os.system("pip install requests")
-      
+   print("Install requests module? Y/n")
+   install = input("\n")
+   if install.lower() == "y":
+      print("Installing requests module...")
+      os.system("pip install requests")
+   else:
+      print("Can't run the script without requests module!")
+         
 
 LICENSE = """
 MIT License
