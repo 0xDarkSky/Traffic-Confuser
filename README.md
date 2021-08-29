@@ -17,13 +17,21 @@ Support on **Linux** and **Termux**. (The code would work on Windows and MAC as 
 
 **Note**: Use `termux-traffic-confuser.py` if you're on Termux
 
-**Author**: QL0R
+# How does it work?
+
+Basically it sends HTTP requests to random websites in the `sample.txt` file, (you can add more websites in it). The script chooses what website to open randomly,
+the time periods betweeen requests are also random: 
+you can set it to be slower/faster ex.: `random.randint(0,5)` for fast (not recommended since some websites might block you) or `random.randint(10,30)` for slow, looks more realistic (recommended).
+
+# Author: QL0R
 
 
-You can buy me a coffee ;D 
+
+# You can buy me a coffee ;D 
 
 BTC: `bc1q9wxz3vk43sv9yd0aacmpta55q42tg2ffprkut4` 
 
 ETH: `0x468A5110389f80a5C16642Dc2D70d5E117c73e64`
 
 XMR: `49eSWZyQqT4Wwik4bQqPiKJyN3GGKQkkXAZ5WuPJdkCT3HGysh58k96ZWCy1H4fmHGNmTcRTb9HvERzWVTfFAvkaBpH9yRP`
+
