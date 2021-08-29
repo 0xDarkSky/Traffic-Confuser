@@ -19,6 +19,7 @@ Support on **Linux** and **Termux**. (Might work on Windows and MacOS, not teste
 
 **Author**: QL0R
 
+
 You can buy me a coffee ;D 
 
 BTC: `bc1q9wxz3vk43sv9yd0aacmpta55q42tg2ffprkut4` 
