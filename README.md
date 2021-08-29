@@ -19,7 +19,7 @@ Support on **Linux** and **Termux**. (The code would work on Windows and MAC as 
 
 # How does it work?
 
-Basically it sends HTTP requests to random websites in the `sample.txt` file, (you can add more websites in it). The script chooses what website to open randomly,
+Basically it sends HTTP requests to random websites, the websites are stored in the `sample.txt` file, (you can add more websites in it, modify it). The script chooses what website to open randomly,
 the time periods betweeen requests are also random: 
 you can set it to be slower/faster ex.: `random.randint(0,5)` for fast (not recommended since some websites might block you) or `random.randint(10,30)` for slow, looks more realistic (recommended).
 
