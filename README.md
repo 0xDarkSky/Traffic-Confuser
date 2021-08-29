@@ -15,7 +15,7 @@ You can edit the sample.txt file to other websites you want.
 
 Support on **Linux** and **Termux**. (The code would work on Windows and MAC as well if you edit it that way. I might make a **Windows version** in the *future* !)
 
-**Note**: Use `termux-traffic-confuser.py` if you're on Termux
+**Note**: Use `termux-traffic-confuser.py` if you're on Termux.
 
 # How does it work?
 
