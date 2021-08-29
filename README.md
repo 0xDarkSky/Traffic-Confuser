@@ -19,4 +19,8 @@ Support on **Linux** and **Termux**. (Might work on Windows and MacOS, not teste
 
 **Author**: QL0R
 
-You can buy me a coffee ;D BTC: `bc1q9wxz3vk43sv9yd0aacmpta55q42tg2ffprkut4`, ETH: `0x468A5110389f80a5C16642Dc2D70d5E117c73e64`, XMR: `49eSWZyQqT4Wwik4bQqPiKJyN3GGKQkkXAZ5WuPJdkCT3HGysh58k96ZWCy1H4fmHGNmTcRTb9HvERzWVTfFAvkaBpH9yRP`
+You can buy me a coffee ;D 
+
+BTC: `bc1q9wxz3vk43sv9yd0aacmpta55q42tg2ffprkut4` 
+ETH: `0x468A5110389f80a5C16642Dc2D70d5E117c73e64`
+XMR: `49eSWZyQqT4Wwik4bQqPiKJyN3GGKQkkXAZ5WuPJdkCT3HGysh58k96ZWCy1H4fmHGNmTcRTb9HvERzWVTfFAvkaBpH9yRP`
