@@ -116,12 +116,12 @@ def start_status():
     super_type("Started...\n\n")
   
 def arg():
-    if usr_input.lower() == "slow":
-       sleeper = random.randint(5,20)
+    if usr_input.lower() == "slow": #recommended
+       sleeper = random.randint(5,20) #you can change it to (10,30) or more, it will look more realistic
        sleeps = float(sleeper)
        time.sleep(sleeps)
-    if usr_input.lower() == "fast":
-       sleeper = random.randint(0,3)
+    if usr_input.lower() == "fast": #not recommended! looks unrealistic, some websites might block the requests.
+       sleeper = random.randint(0,5)
        sleeps = float(sleeper)
        time.sleep(sleeps)
     
