@@ -16,7 +16,7 @@ Usage: `python3 traffic-confuser.py`
 
 You can edit the sample.txt file to other websites you want.
 
-Support on **Linux**. (The code would work on Windows and MAC as well if you edit it that way. I might make a **Windows version** in the *future* !)
+Support on **Linux** (The code would work on Windows and MAC as well if you edit it that way. I might make a **Windows version** in the *future* !)
 
 # How does it work?
 
