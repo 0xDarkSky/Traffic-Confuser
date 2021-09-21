@@ -79,7 +79,7 @@ def file_check():
        os.system('cls' if os.name == 'nt' else 'clear')
        super_type("License check is a one time thing.\n")
        f = open("CodeCheck", "a")
-       f.write("\n\n-- Please don't delete me, I'm just a simple check for the Traffic-Confuser.py code, I don't take much space :) --")
+       f.write("\n\n-- Please don't delete me, I'm just a simple check for the Traffic-Confuser.py.py code, I don't take much space :) --")
        f.close()
 
 def start_status():
