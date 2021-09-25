@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import math
 import requests as req
 import os
@@ -61,14 +60,6 @@ def super_type(b):
         sys.stdout.flush()
         time.sleep(0.03)
 
-def root_check():
-    sudo_check = os.geteuid() == 0
-    if sudo_check == True:
-       pass
-    else:
-       super_type("Run script as root! (Only for the first time)\n")
-       exit()
-
 def web_check():
     if path.exists("sample.txt"):
        pass
@@ -78,38 +69,18 @@ def web_check():
        Q.write("https://whatsapp.com\nhttps://vimeo.com\nhttps://mozilla.org\nhttps://linkedin.com\nhttps://microsoft.com\nhttps://www.blogger.com\nhttps://apple.com\nhttps://www.reddit.com\nhttps://www.github.com\nhttps://www.youtube.com\nhttps://www.facebook.com\nhttps://www.google.com\nhttps://www.weather.com\nhttps://www.cnn.com\nhttps://www.twitter.com\nhttps://www.wikipedia.org\nhttps://www.quora.com\n")
        Q.close()
        super_type("\n\nFile created.\n")
-
-def run_anywhere():
-    super_type("Do you want to copy the file to /usr/local/bin? This will let you run the code from any directory by typing Traffic-Confuser. Don't do it if you're on Windows or Termux because it won't work.")
-    ch = input("\nY/n? ")
-    if "y" == ch.lower():
-        os.system("mv traffic-confuser.py Traffic-Confuser")
-        os.system("cp Traffic-Confuser /usr/local/bin")
-        super_type("Now you can run it anywhere by typing: Traffic-Confuser")
-        time.sleep(2)
-        os.system('cls' if os.name == 'nt' else 'clear')
-    if "n" == ch.lower():
-        pass
     
 def file_check():
     if path.exists("CodeCheck"):
-       x = os.stat("CodeCheck")
-       age = (time.time()-x.st_mtime)
-       if age > 356029.69091153145:
-          super_type("\nYou should check the repository https://github.com/QL0R/Traffic-Confuser, the files might be outdated.\n")
-          time.sleep(2)
-          pass
+       pass
     else:
        print(LICENSE)
        time.sleep(3)
        os.system('cls' if os.name == 'nt' else 'clear')
-       root_check()
        super_type("License check is a one time thing.\n")
        f = open("CodeCheck", "a")
-       f.write("\n\n-- Please don't delete me, I'm just a simple check for the Traffic-Confuser.py code, I don't take much space :) --")
+       f.write("\n\n-- Please don't delete me, I'm just a simple check for the Traffic-Confuser.py.py code, I don't take much space :) --")
        f.close()
-       run_anywhere()
-       
 
 def start_status():
     print(logo)
@@ -125,7 +96,7 @@ def send_stuff():
             print("Success - " + split_content)
          else:
             print("Fail - " + split_content)
-         sleepr = random.randint(10,30)
+         sleepr = random.randint(0,3) # edit this if you want it faster/slower
          sleeper = float(sleepr)
          time.sleep(sleeper)
         
