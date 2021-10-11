@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# path to your python3 ^
 import os
 import time
 import os.path
@@ -6,6 +7,15 @@ from os import path
 import sys
 import random
 import argparse
+
+#####################################
+###   The code might be a little  ###
+###     messy because 2 coders    ###
+###      are editing it lol,       ###
+###      so feel free to          ###
+###        optimize it            ###
+#####################################
+
 
 try:
     import requests as req
@@ -82,12 +92,6 @@ class Confuser:
             sys.stdout.flush()
             time.sleep(0.03)
 
-    def root_check(self):
-        if os.geteuid == 0:
-            pass
-        else:
-            sys.exit(self.super_type("Run script as root! (Only for the first time)\n"))
-
     def web_check(self):
         if path.exists("sample.txt"):
             pass
@@ -105,10 +109,10 @@ class Confuser:
     def run_anywhere(self):
         self.super_type("Making it global")
 
-        os.system("mv traffic-confuser.py Traffic-Confuser.py")
-        os.system("cp Traffic-Confuser.py /usr/local/bin")
-        os.system("chmod +x /usr/local/bin/Traffic-Confuser.py")
-        self.super_type("Now you can run it anywhere by typing: Traffic-Confuser.py")
+        os.system("sudo cp Traffic-Confuser.py /usr/local/bin")
+        os.system("sudo chmod +x /usr/local/bin/Traffic-Confuser.py")
+        os.system("sudo mv /usr/local/bin/Traffic-Confuser.py /usr/local/bin/Traffic-Confuser")
+        self.super_type("Now you can run it anywhere by typing: Traffic-Confuser")
         time.sleep(2)
         os.system('cls' if os.name == 'nt' else 'clear')
         self.decide()
@@ -120,7 +124,6 @@ class Confuser:
             print(LICENSE)
             time.sleep(3)
             os.system('cls' if os.name == 'nt' else 'clear')
-            self.root_check()
             self.super_type("License check is a one time thing.\n")
             with open("CodeCheck", 'a') as f:
                 f.write(
@@ -141,7 +144,7 @@ class Confuser:
             self.sleeps = float(random.randint(0, 5))
         else:
             sys.exit(
-                self.super_type("Wrong input!\nUsage: specify slow or fast, ex.: python3 traffic-confuser.py slow.\n"))
+                self.super_type("Wrong input!"))
 
     def send(self):
         with open("sample.txt") as f:
@@ -154,7 +157,6 @@ class Confuser:
             if resp.status_code == 200:
                 print("Success - " + split_content)
             else:
-
                 print("Fail - " + split_content)
 
     def main(self):
@@ -171,6 +173,7 @@ class Confuser:
                 if secs > 60:
                     self.super_type(
                         f"\nSent {self.count} requests in {str(int(secs / 60))}mins")
+                time.sleep(2)
                 os.system('cls' if os.name == 'nt' else 'clear')
                 exit(0)
 
