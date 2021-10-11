@@ -93,11 +93,11 @@ class Confuser:
             time.sleep(0.03)
 
     def web_check(self):
-        if path.exists("sample.txt"):
+        if path.exists(".sample.txt"):
             pass
         else:
-            self.super_type("File sample.txt is missing. Creating file...")
-            with open("sample.txt", 'a') as Q:
+            self.super_type("File .sample.txt is missing. Creating file...")
+            with open(".sample.txt", 'a') as Q:
                 Q.write(
                     "https://whatsapp.com\nhttps://vimeo.com\nhttps://mozilla.org\nhttps://linkedin.com\nhttps"
                     "://microsoft.com\nhttps://www.blogger.com\nhttps://apple.com\nhttps://www.reddit.com\nhttps"
@@ -107,7 +107,7 @@ class Confuser:
             self.super_type("\n\nFile created.\n")
 
     def run_anywhere(self):
-        self.super_type("Making it global")
+        self.super_type("Making it global.\n")
 
         os.system("sudo cp Traffic-Confuser.py /usr/local/bin")
         os.system("sudo chmod +x /usr/local/bin/Traffic-Confuser.py")
@@ -115,17 +115,17 @@ class Confuser:
         self.super_type("Now you can run it anywhere by typing: Traffic-Confuser")
         time.sleep(2)
         os.system('cls' if os.name == 'nt' else 'clear')
-        self.decide()
+        #self.decide()
 
     def file_check(self):
-        if path.exists("CodeCheck"):
+        if path.exists(".CodeCheck"):
             pass
         else:
             print(LICENSE)
             time.sleep(3)
             os.system('cls' if os.name == 'nt' else 'clear')
             self.super_type("License check is a one time thing.\n")
-            with open("CodeCheck", 'a') as f:
+            with open(".CodeCheck", 'a') as f:
                 f.write(
                     "\n\n-- Please don't delete me, I'm just a simple check for the Traffic-Confuser.py.py code, "
                     "I don't take "
@@ -147,7 +147,7 @@ class Confuser:
                 self.super_type("Wrong input!"))
 
     def send(self):
-        with open("sample.txt") as f:
+        with open(".sample.txt") as f:
             content = f.readlines()
             content_done = [x.strip() for x in content]
             split_content = random.choice(content_done)
