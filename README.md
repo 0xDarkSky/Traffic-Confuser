@@ -26,6 +26,8 @@ you can set it to be slower/faster ex.: `random.randint(20,50)` for fast (not re
 
 You can run it in the background on your daily browsing (consider *adding more websites* to `.sample.txt`) 
 
+*Note: give it a try running it again if you encounter any errors.*
+
 # Author: QL0R
 
 
