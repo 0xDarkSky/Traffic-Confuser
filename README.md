@@ -20,11 +20,11 @@ Support on **Linux** (The code would work on Windows and MAC as well if you edit
 
 # How does it work?
 
-Basically it sends HTTP requests to random websites, the websites are stored in the `sample.txt` file, (you can add more websites in it, modify it). The script chooses what website to open randomly,
+Basically it sends HTTP requests to random websites, the websites are stored in the `.sample.txt` file, (you can add more websites in it, modify it). The script chooses what website to open randomly,
 the time periods betweeen requests are also random: 
-you can set it to be slower/faster ex.: `random.randint(0,5)` for fast (not recommended since some websites might block you) or `random.randint(10,30)` for slow, looks more realistic (recommended).
+you can set it to be slower/faster ex.: `random.randint(20,50)` for fast (not recommended since some websites might block you) or `random.randint(40,180)` for slow, looks more realistic (recommended).
 
-You can run it in the background on your daily browsing (consider *adding more websites* to `sample.txt`) 
+You can run it in the background on your daily browsing (consider *adding more websites* to `.sample.txt`) 
 
 # Author: QL0R
 
