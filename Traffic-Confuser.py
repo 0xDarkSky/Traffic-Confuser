@@ -139,9 +139,9 @@ class Confuser:
         if self.args._global:
             self.run_anywhere()
         if self.args.pace.lower() == 'slow':
-            self.sleeps = float(random.randint(5, 20))
+            self.sleeps = float(random.randint(40, 180))
         elif self.args.pace.lower() == 'fast':
-            self.sleeps = float(random.randint(0, 5))
+            self.sleeps = float(random.randint(20, 50))
         else:
             sys.exit(
                 self.super_type("Wrong input!"))
