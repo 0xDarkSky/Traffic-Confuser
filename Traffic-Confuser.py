@@ -1,28 +1,23 @@
-#!/usr/bin/env python3
-# path to your python3 ^
-import os
-import time
-import os.path
-from os import path
-import sys
-import random
-import argparse
-
-#####################################
-###   The code might be a little  ###
-###     messy because 2 coders    ###
-###      are editing it lol,       ###
-###      so feel free to          ###
-###        optimize it            ###
-#####################################
-
+#!/usr/bin/python3
+#your python location ^
 
 try:
-    import requests as req
-except ImportError:
-    print('\nMissing dependencies!\nInstalling requests module...') if input(
-        "Install requests module? Y/n\n").lower() == 'y' else sys.exit("Can't run the script without requests module!")
-    os.system("pip3 install requests")
+   import os, math, time, sys, random, requests as req
+   import os.path
+   from os import path
+   from termcolor import colored
+except ModuleNotFoundError:
+   print("Some modules might not be installed (termcolor, requests). Would you like to install them? Y/n")
+   modules = input("")
+   if modules == "y":
+      print("Installing modules...")
+      os.system("pip install termcolor")
+      os.system("pip install requests")
+      print("Run the program again.")
+      exit()
+   else:
+      print("Exitting.")
+      exit()
 
 LICENSE = """
 MIT License
@@ -70,118 +65,98 @@ logo = """
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
+def super_type(b):
+    for a in b:
+        sys.stdout.write(a)
+        sys.stdout.flush()
+        time.sleep(0.03)
 
-class Confuser:
-    def __init__(self):  # used
-        self.parser = argparse.ArgumentParser()
-        self.arguments()
-        self.args = self.parser.parse_args()
+def web_check():
+    if path.exists("sample.txt"):
+       pass
+    else:
+       super_type("File sample.txt is missing. Creating file...")
+       Q = open("sample.txt", "a")
+       Q.write("https://whatsapp.com\nhttps://vimeo.com\nhttps://mozilla.org\nhttps://linkedin.com\nhttps://microsoft.com\nhttps://www.blogger.com\nhttps://apple.com\nhttps://www.reddit.com\nhttps://www.github.com\nhttps://www.youtube.com\nhttps://www.facebook.com\nhttps://www.google.com\nhttps://www.weather.com\nhttps://www.cnn.com\nhttps://www.twitter.com\nhttps://www.wikipedia.org\nhttps://www.quora.com\nhttps://duckduckgo.com\n")
+       Q.close()
+       super_type("\n\nFile created.\n")
 
-        self.sleeps = 0
-        self.count = 0
 
-        self.start_time = time.time()
+def file_check():
+    if path.exists("CodeCheck"):
+       pass
+    else:
+       print(colored(f"{LICENSE}", "red"))
+       time.sleep(3)
+       os.system('cls' if os.name == 'nt' else 'clear')
+       root_check()
+       super_type("License check is a one time thing.\n")
+       f = open("CodeCheck", "a")
+       f.write("\n\n-- Please don't delete me, I'm just a simple check for the Traffic-Confuser.py code, I don't take much space :) --")
+       f.close()
 
-    def arguments(self):  # used
-        self.parser.add_argument('--pace', '-p', help="Set the pace", type=str)
-        self.parser.add_argument('--_global', '-g', help='call it from anywhere', action='store_true')
+try:       
+   usr_input = sys.argv[1]
+except IndexError:
+   super_type("Wrong input!\nUsage: specify slow or fast, ex.: python3 traffic-confuser.py slow\n")
+   exit()
 
-    def super_type(self, b):  # used
-        for a in b:
-            sys.stdout.write(a)
-            sys.stdout.flush()
-            time.sleep(0.03)
+def start_status():
+    print(colored(f"{logo}", "magenta"))
+    super_type(colored("Started...\n\n", "yellow"))
+  
+def arg():
+    if usr_input.lower() == "slow":
+       sleeper = random.randint(25,82)
+       sleeps = float(sleeper)
+       time.sleep(sleeps)
+    if usr_input.lower() == "fast":
+       sleeper = random.randint(15,35)
+       sleeps = int(sleeper)
+       time.sleep(sleeps)
 
-    def web_check(self):
-        if path.exists(".sample.txt"):
-            pass
-        else:
-            self.super_type("File .sample.txt is missing. Creating file...")
-            with open(".sample.txt", 'a') as Q:
-                Q.write(
-                    "https://whatsapp.com\nhttps://vimeo.com\nhttps://mozilla.org\nhttps://linkedin.com\nhttps"
-                    "://microsoft.com\nhttps://www.blogger.com\nhttps://apple.com\nhttps://www.reddit.com\nhttps"
-                    "://www.github.com\nhttps://www.youtube.com\nhttps://www.facebook.com\nhttps://www.google.com"
-                    "\nhttps://www.weather.com\nhttps://www.cnn.com\nhttps://www.twitter.com\nhttps://www.wikipedia"
-                    ".org\nhttps://www.quora.com\n")
-            self.super_type("\n\nFile created.\n")
-
-    def run_anywhere(self):
-        self.super_type("Making it global.\n")
-
-        os.system("sudo cp Traffic-Confuser.py /usr/local/bin")
-        os.system("sudo chmod +x /usr/local/bin/Traffic-Confuser.py")
-        os.system("sudo mv /usr/local/bin/Traffic-Confuser.py /usr/local/bin/Traffic-Confuser")
-        self.super_type("Now you can run it anywhere by typing: Traffic-Confuser")
-        time.sleep(2)
-        os.system('cls' if os.name == 'nt' else 'clear')
-        #self.decide()
-
-    def file_check(self):
-        if path.exists(".CodeCheck"):
-            pass
-        else:
-            print(LICENSE)
-            time.sleep(3)
-            os.system('cls' if os.name == 'nt' else 'clear')
-            self.super_type("License check is a one time thing.\n")
-            with open(".CodeCheck", 'a') as f:
-                f.write(
-                    "\n\n-- Please don't delete me, I'm just a simple check for the Traffic-Confuser.py.py code, "
-                    "I don't take "
-                    "much space :) --")
-
-    def start_status(self):
-        print(logo)
-        self.super_type("Started...\n\n")
-
-    def decide(self):
-        if self.args._global:
-            self.run_anywhere()
-        if self.args.pace.lower() == 'slow':
-            self.sleeps = float(random.randint(40, 180))
-        elif self.args.pace.lower() == 'fast':
-            self.sleeps = float(random.randint(20, 50))
-        else:
-            sys.exit(
-                self.super_type("Wrong input!"))
-
-    def send(self):
-        with open(".sample.txt") as f:
+def text_stuff():
+       with open("sample.txt") as f:
+            INFO = colored("Success - ", "green")
+            FAILINFO = colored("Failure - ", "red")
             content = f.readlines()
             content_done = [x.strip() for x in content]
             split_content = random.choice(content_done)
             resp = req.get(split_content)
-            self.decide()
-
+            arg()
             if resp.status_code == 200:
-                print("Success - " + split_content)
+               print("[INFO] " + INFO + split_content)
             else:
-                print("Fail - " + split_content)
+               print("[INFO] " + FAILINFO + split_content)
 
-    def main(self):
-        while True:
-            try:
-                self.send()
-                self.count += 1
-                time.sleep(self.sleeps)
+count = 0
 
-            except KeyboardInterrupt:
-                secs = int((time.time() - self.start_time))
-                if secs < 60:
-                    self.super_type(f"\nSent {self.count} requests in " + "%s seconds." % secs)
-                if secs > 60:
-                    self.super_type(
-                        f"\nSent {self.count} requests in {str(int(secs / 60))}mins")
-                time.sleep(2)
-                os.system('cls' if os.name == 'nt' else 'clear')
-                exit(0)
+def send_count():
+       secs = int((time.time() - start_time))
+       if secs < 60:
+          super_type(f"\nSent {count} requests in " + "%s seconds." % (secs))
+       if secs > 60:
+          calc = secs / 60
+          mins = int(calc)
+          super_type(f"\nSent {count} requests in {mins} minutes.\n")
+          print("")
+       exit()
 
+web_check()
+file_check()
+start_status()
+start_time = time.time()
 
-if __name__ == '__main__':
-    c = Confuser()
-    c.web_check()
-    c.file_check()
-    c.start_status()
-    c.decide()
-    c.main()
+while True:
+    try:
+       count += 1
+       if count == 100:
+          end_count() 
+       if usr_input.lower() == "slow":
+          text_stuff()
+       if usr_input.lower() == "fast":
+          text_stuff()
+    except KeyboardInterrupt:
+       send_count()
+       time.sleep(2)
+       os.system('cls' if os.name == 'nt' else 'clear')
