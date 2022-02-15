@@ -8,11 +8,11 @@
 ![traffic-confuser](https://user-images.githubusercontent.com/84932430/126857034-96fc345b-7d71-403b-b1fd-63af2860585b.GIF)
 
 
-Libraries to install: `pip install requests`
+Libraries to install: `pip install requests`, `pip install termcolor`
 
 How to install the project: `git clone https://github.com/QL0R/Traffic-Confuser.git`
 
-Usage: `python3 traffic-confuser.py`
+Usage: `python3 Traffic-Confuser.py`
 
 You can edit the sample.txt file to other websites you want.
 
@@ -20,11 +20,11 @@ Support on **Linux** (The code would work on Windows and MAC as well if you edit
 
 # How does it work?
 
-Basically it sends HTTP requests to random websites, the websites are stored in the `.sample.txt` file, (you can add more websites in it, modify it). The script chooses what website to open randomly,
+Basically it sends HTTP requests to random websites, the websites are stored in the `sample.txt` file, (you can add more websites in it, modify it). The script chooses what website to open randomly,
 the time periods betweeen requests are also random: 
 you can set it to be slower/faster ex.: `random.randint(20,50)` for fast (not recommended since some websites might block you) or `random.randint(40,180)` for slow, looks more realistic (recommended).
 
-You can run it in the background on your daily browsing (consider *adding more websites* to `.sample.txt`) 
+You can run it in the background on your daily browsing (consider *adding more websites* to `sample.txt`) 
 
 *Note: give it a try running it again if you encounter any errors.*
 
