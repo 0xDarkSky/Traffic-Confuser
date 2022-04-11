@@ -28,4 +28,4 @@ You can run it in the background on your daily browsing (consider *adding more w
 
 *Note: give it a try running it again if you encounter any errors.*
 
-# Author: QL0R
+# Author: 0xDarkSky
