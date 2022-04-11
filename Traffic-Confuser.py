@@ -65,6 +65,8 @@ logo = """
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
+headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4369.0 Safari/537.36"}
+
 def super_type(b):
     for a in b:
         sys.stdout.write(a)
@@ -95,7 +97,7 @@ def file_check():
        f.write("\n\n-- Please don't delete me, I'm just a simple check for the Traffic-Confuser.py code, I don't take much space :) --")
        f.close()
 
-try:       
+try:
    usr_input = sys.argv[1]
 except IndexError:
    super_type("Wrong input!\nUsage: specify slow or fast, ex.: python3 traffic-confuser.py slow\n")
@@ -104,10 +106,10 @@ except IndexError:
 def start_status():
     print(colored(f"{logo}", "magenta"))
     super_type(colored("Started...\n\n", "yellow"))
-  
+
 def arg():
     if usr_input.lower() == "slow":
-       sleeper = random.randint(25,82)
+       sleeper = random.randint(85,600)
        sleeps = float(sleeper)
        time.sleep(sleeps)
     if usr_input.lower() == "fast":
@@ -122,7 +124,7 @@ def text_stuff():
             content = f.readlines()
             content_done = [x.strip() for x in content]
             split_content = random.choice(content_done)
-            resp = req.get(split_content)
+            resp = req.get(split_content, headers=headers)
             arg()
             if resp.status_code == 200:
                print("[INFO] " + INFO + split_content)
@@ -151,7 +153,7 @@ while True:
     try:
        count += 1
        if count == 100:
-          end_count() 
+          end_count()
        if usr_input.lower() == "slow":
           text_stuff()
        if usr_input.lower() == "fast":
