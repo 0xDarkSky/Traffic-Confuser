@@ -24,7 +24,9 @@ Basically it sends HTTP requests to random websites, the websites are stored in 
 the time periods betweeen requests are also random: 
 you can set it to be slower/faster ex.: `random.randint(20,50)` for fast (not recommended since some websites might block you) or `random.randint(40,180)` for slow, looks more realistic (recommended).
 
-You can run it in the background on your daily browsing (consider *adding more websites* to `sample.txt`) 
+You can run it in the background on your daily browsing.
+
+There's like a million of most used websites in the `sample.txt` file lol
 
 *Note: give it a try running it again if you encounter any errors.*
 
