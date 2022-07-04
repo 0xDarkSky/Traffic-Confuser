@@ -108,28 +108,36 @@ def start_status():
     super_type(colored("Started...\n\n", "yellow"))
 
 def arg():
-    if usr_input.lower() == "slow":
-       sleeper = random.randint(85,600)
-       sleeps = float(sleeper)
-       time.sleep(sleeps)
-    if usr_input.lower() == "fast":
-       sleeper = random.randint(15,35)
-       sleeps = int(sleeper)
-       time.sleep(sleeps)
+   try:
+      if usr_input.lower() == "slow":
+         sleeper = random.randint(85,600)
+         sleeps = float(sleeper)
+         time.sleep(sleeps)
+      if usr_input.lower() == "fast":
+         sleeper = random.randint(15,35)
+         sleeps = int(sleeper)
+         time.sleep(sleeps)
+   except:
+      pass
 
 def text_stuff():
        with open("sample.txt") as f:
-            INFO = colored("Success - ", "green")
-            FAILINFO = colored("Failure - ", "red")
-            content = f.readlines()
-            content_done = [x.strip() for x in content]
-            split_content = random.choice(content_done)
-            resp = req.get(split_content, headers=headers)
-            arg()
-            if resp.status_code == 200:
-               print("[INFO] " + INFO + split_content)
-            else:
-               print("[INFO] " + FAILINFO + split_content)
+            try:
+               INFO = colored("Success - ", "green")
+               FAILINFO = colored("Failure - ", "red")
+               content = f.readlines()
+               content_done = [x.strip() for x in content]
+               split_content = random.choice(content_done)
+               resp = req.get(split_content, headers=headers)
+               arg()
+               if resp.status_code == 200:
+                  print("[INFO] " + INFO + split_content)
+               else:
+                  print("[INFO] " + FAILINFO + split_content)
+            except:
+               print("[INFO] An Error as ocurred, continuing..")
+               pass
+
 
 count = 0
 
